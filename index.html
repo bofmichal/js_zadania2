@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+    <head>
+        <title>zestaw 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/newcss.css" type="text/css" />
+    </head>
+    <body>
+        <!--zadanie2-->
+        <div class="zadania">
+            Zadanie 2 - wylosuj trzy liczby a następnie wypisz je w kolejności 
+            niemalejącej (np. 2 4 4 - kolejność niemalejąca).
+*To samo zrób dla wartości wpisanych przez użytkownika w trzech polach tekstowych.
+
+
+            <p>Wylosowana liczba 1(L1): <span id="liczba1"></span></p>
+            <input type="button" onclick="los1()" value="losuj L1" id="out1"/>
+            <p>Wylosowana liczba 2(L2): <span id="liczba2"></span></p>
+            <input type="button" onclick="los2()" value="losuj L2" />
+            <p>Wylosowana liczba 3(L3): <span id="liczba3"></span></p>
+            <input type="button" onclick="los3()" value="losuj L1" />
+            <p id="sortowane"></p> 
+            <input type="button" onclick="sort()" value="sortuj wylosowane" />
+            <p>wpisz pierwsza liczbę:<input type="text" id="licz1"/></p> 
+            <p>wpisz drugą liczbę:<input type="text" id="licz2"/></p>
+            <p>wpisz trzecia liczbę:<input type="text" id="licz3"/></p>
+            <p id="posortowane"></p> 
+            <input type="button" onclick="sortuj()" value="sortuj wpissane" />
+        </div>
+        <!--zadanie 3-->
+        <div class="zadania">
+            3.	Napisz program, który wypisze do konsoli wszystkie parzyste liczby od 1 do 100, które są niepodzielne przez 3.
+	Powtórz to samo, ale tym razem wypisując liczby do outputu (dokumentu).
+        <p>Liczby nieparzyste od 1do 100: <span id="nieparzyste"></span></p>
+        <input type="button" onclick="nieparzyste()" value="wyswietl nieparzyste" />
+        </div>
+        <!--zadanie 4-->
+        <div class="zadania">
+            4.	Napisz program, który wylosuje 10 liczb (z przedziału 1-20), a następnie wyświetli ich sumę.
+o	Powtórz to, ale tym razem liczby nie są losowane, ale wprowadzane przez użytkownika
+            <p>Wylosowane liczby : <span id="liczby"></span></p>
+            <input type="button" onclick="losliczb()" value="losuj licby"/>
+            <p>Suma wylosowanych liczb: <span id="suma"></span></p>
+            <input type="button" onclick="sumliczb()" value="sumuj liczby" />
+        </div>
+        <script type="text/javascript" src="js/newjs.js"></script>
+    </body>
+</html>
