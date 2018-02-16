@@ -70,20 +70,20 @@ if(ar[i]>98){
 }
 document.getElementById("nieparzyste").innerHTML=ar;
 }
-//zadanie 4 nieogar
-//var ar = [];
+//zadanie 4 
+var ar = [];
 function losliczb(){
-    var ar = [];
+    //var ar = [];
 for (var i = 0; i < 10; ++i) {
-ar[i]=" "+(Math.floor(Math.random()*20)+1);
+ar[i]=(Math.floor(Math.random()*20)+1);
     //document.getElementById("liczby").innerHTML=ar; 
 }
 document.getElementById("liczby").innerHTML=ar;
 }
 
 function sumliczb(){
-    var ar=[];
-    ar=[document.getElementById("liczby").innerHTML];
+    //var ar=[];
+    //ar=[document.getElementById("liczby").innerHTML];
     //ar=document.getElementById("liczby").innerHTML;
     //ar[i]=ar[document.getElementById("liczby").innerHTML];
     var sum = 0; 
