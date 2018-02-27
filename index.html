@@ -45,6 +45,33 @@ o	Powtórz to, ale tym razem liczby nie są losowane, ale wprowadzane przez uży
             <p>Suma wylosowanych liczb: <span id="suma"></span></p>
             <input type="button" onclick="sumliczb()" value="sumuj liczby" />
         </div>
+        <!--zadanie 5-->
+<div class="zadania">
+    5.	Napisz program, który będzie losował liczby (z przedziału 1-20), dopókich ich suma nie przekroczy 100, a następnie wyświetli ich średnią.
+o	Powtórz to, ale tym razem liczby nie są losowane, ale wprowadzane przez użytkownika.
+<p>Wylosowane liczby : <span id="liczby2"></span></p>
+<p>Suma wylosowanych liczb: <span id="suma2"></span></p>
+<p>srednia wylosowanych liczb: <span id="srednia"></span></p>
+            <input type="button" onclick="losliczb2()" value="losuj licby"/>
+</div>
+<!--zadanie 6-->
+        <div class="zadania">
+Napisz program obliczający rzeczywiste pierwiastki równania kwadratowego postaci 
+ax2+bx+c=0. Program odpowiednio reagować gdy delta jest mniejsza od 0 (wyświetlić 
+komunikat o braku rzeczywistych pierwiastków) lub równa 0 (wyświetlić tylko jeden pierwiastek). 
+Pamiętaj, aby sprawdzać czy podawane wartości są liczbami
+<p>Równanie kwadratowe: ax<sup>2</sup>+bx+c=0</p>
+<p>Definicja: a &#8800; 0; a,b,c &#8712; R<br> &Delta; =b<sup>2</sup>-4ac</p>
+<p>Kiedy &Delta; = 0 - rownanie nie ma rozwiązań <br>&Delta; > 0 - rownanie ma dwa rozwiązania<br>&Delta; &#8800; 0 - rownanie ma jedno rozwiązanie</p>
+            <p>wpisz pierwsza a:<input type="text" id="li1"/></p> 
+            <p>wpisz drugą b:<input type="text" id="li2"/></p>
+            <p>wpisz trzecia c:<input type="text" id="li3"/></p>
+            <p id="wynik"></p>
+            <p>&Delta; = <span id="delta"></span></p>
+            <p>x<sub>1</sub> = <span id="x1"></span></p>
+            <p>x<sub>2</sub> = <span id="x2"></span></p>
+            <input type="button" onclick="rownanie()" value="wykonaj działanie"/>
+        </div>
         <script type="text/javascript" src="js/newjs.js"></script>
     </body>
 </html>
