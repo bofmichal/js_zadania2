@@ -93,3 +93,68 @@ sum= sum + ar[i];
 console.log(sum);
 document.getElementById("suma").innerHTML=sum;
 }
+
+//zadanie 5 
+
+function losliczb2(){
+    var ar = [];
+/*for (var i = 0; i < 10; ++i) {
+ar[i]=(Math.floor(Math.random()*20)+1);
+console.log("ar[" + i + "] = " + ar[i]);
+}
+var sum = 0; 
+for (var i = 0; i < ar.length; ++i) {
+    
+sum= sum + ar[i];*/
+    var suma=0;
+    var srednia;
+    do {
+//ar[i] = (Math.floor(Math.random()*20)+1);
+//suma += ar;
+for (var i = 0; i < 10; ++i) {
+ar[i]=(Math.floor(Math.random()*20)+1);
+console.log("ar[" + i + "] = " + ar[i]);     
+}
+for (var i = 0; i < ar.length; ++i) {    
+suma= suma + ar[i];
+srednia=suma/ar.length;
+}
+
+} while(suma < 100)
+console.log(ar + " (suma: " + suma + ")");
+document.getElementById("liczby2").innerHTML=ar;
+document.getElementById("suma2").innerHTML=suma;
+document.getElementById("srednia").innerHTML=srednia;
+}
+
+//zadanie 6
+function rownanie(){
+    var liczba1=parseFloat(document.getElementById("li1").value);
+    var liczba2=parseFloat(document.getElementById("li2").value);
+    var liczba3=parseFloat(document.getElementById("li3").value);
+    var delta;
+    if(isNaN(liczba1)){
+        //document.getElementById("wynik").innerHTML="wpisz liczbę rzeczywistą w polu a";
+        alert("wpisz liczbę rzeczywistą w polu a");
+    }
+    if(isNaN(liczba2)){
+        //document.getElementById("wynik").innerHTML="wpisz liczbę rzeczywistą w polu a";
+        alert("wpisz liczbę rzeczywistą w polu b");
+    }
+    if(isNaN(liczba3)){
+        //document.getElementById("wynik").innerHTML="wpisz liczbę rzeczywistą w polu a";
+        alert("wpisz liczbę rzeczywistą w polu c");
+    }
+    delta=(Math.pow(liczba2, 2))-4*liczba1*liczba3;
+    document.getElementById("delta").innerHTML=delta;
+    console.log(delta);
+    if(delta==0){
+        document.getElementById("wynik").innerHTML="Równanie ma jedno rozwiązanie";
+    }
+    if(delta>0){
+        document.getElementById("wynik").innerHTML="Równanie ma dwa rozwiązania";
+    }
+    if(delta<0){
+        document.getElementById("wynik").innerHTML="Równanie nie ma rozwiązań";
+    }
+}
