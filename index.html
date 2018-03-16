@@ -72,6 +72,32 @@ Pamiętaj, aby sprawdzać czy podawane wartości są liczbami
             <p>x<sub>2</sub> = <span id="x2"></span></p>
             <input type="button" onclick="rownanie()" value="wykonaj działanie"/>
         </div>
+        <!--zadanie 7-->
+        <div class="zadania">
+        7.(***) Gra w zgadywanie - komputer "wymyśla" liczbę 
+        (losuje ją z przedziału 1-100), użytkownik usiłuje ją zgadnąć - wpisując 
+        wartość w polu tekstowym i naciskając OK. Komputer wyświetla podpowiedzi 
+        "mniej" lub "więcej" albo "zgadłeś", jeśli użytkownik trafił
+        <p>zgadnij liczbe z przedziału 1-100:<input type="text" id="zgadnij"/></p>
+        <input type="button" onclick="zgadywanka()" value="sprawdz liczbe"/>
+        <p>odpowiedz:<span id="podpowiedz"></span></p>
+        </div>
+        <!--zadanie 8-->
+        <div class="zadania">
+            8.(***) Odwrotny wariant: to użytkownik wymyśla liczbę, a komputer zgaduje. 
+            Użytkownik przy pomocy przycisków "mniej", "więcej" i "zgadłeś" informuje komputer 
+            o powodzeniu.
+            <p>wpisz liczbę z przedzału 1-100:<input id="swoja" /></p>
+            <input type="button" onclick="kompzgad()" value="strzal kompa" id="strzalkompa"/>
+            <p>ilosc strzalow<input  id="guesses"/></p>
+            <p>komp zgaduje:<input id="Guesser" /></p>
+            <p>odpowiedz:<span id="odpowiedz"></span></p>    
+                     
+            <input type="button" onclick="Guess(2)" value="mniej" />
+            <input type="button" onclick="Guess(1)" value="wiecej" />
+            <input type="button" onclick="zgadles()" value="zgadles"/>
+            <input type=button value="Restart" onclick="Start()">
+            </div>
         <script type="text/javascript" src="js/newjs.js"></script>
     </body>
 </html>
