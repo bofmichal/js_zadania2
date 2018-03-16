@@ -158,3 +158,72 @@ function rownanie(){
         document.getElementById("wynik").innerHTML="Równanie nie ma rozwiązań";
     }
 }
+//zadanie 7
+var losowanie=(Math.floor(Math.random()*100)+1);
+function zgadywanka(){
+    var tur=parseInt(document.getElementById("zgadnij").value);
+    if(isNaN(tur) || tur>100 || tur<=0){
+        alert("wpisz liczbę od 1 do 100");
+    }
+    if(losowanie==tur){
+        document.getElementById("podpowiedz").innerHTML="TRAFILES!!!";
+    }
+    if(losowanie>tur){
+        document.getElementById("podpowiedz").innerHTML="wiecej";
+    }
+    if(losowanie<tur){
+        document.getElementById("podpowiedz").innerHTML="mniej";
+    }
+}
+
+//zadanie 8 
+var max=101; 
+var min=0;              
+var cGuess=(Math.floor(Math.random()*100)+1);       
+var Guesses=1;
+var swoja=document.getElementById("swoja").value;
+function kompzgad(){
+    if (isNaN(document.getElementById("swoja").value) || document.getElementById("swoja").value>100){
+        alert("Wpisz liczbę z przedziału 1 - 100");
+    }
+    document.getElementById("Guesser").value=cGuess;
+    document.getElementById("guesses").value=1;
+    if(cGuess==swoja){
+        document.getElementById("odpowiedz").innerHTML="TRAFILES!!!";
+    }
+    
+}
+function zgadles(){
+    document.getElementById("odpowiedz").innerHTML="TRAFILES!!!";
+}
+function Guess(n){
+    
+    if(n==1){		
+   min=cGuess;
+   if(cGuess==document.getElementById("swoja").value){
+        document.getElementById("odpowiedz").innerHTML="TRAFILES!!!";
+        
+    }
+  }
+  else {			//n!=1 (n==2) then the user pressed "Lower", thus a similar idea
+   max=cGuess
+   if(cGuess==document.getElementById("swoja").value){
+        document.getElementById("odpowiedz").innerHTML="TRAFILES!!!";
+        
+    }
+  }
+  Guesses=Guesses+1	
+  cGuess=Math.floor((max+min)/2) 
+  Guesser.value=cGuess		
+  guesses.value=Guesses	
+  if(cGuess==swoja){
+        document.getElementById("odpowiedz").innerHTML="TRAFILES!!!";
+    }
+}
+
+function Start(){		
+  document.getElementById("odpowiedz").innerHTML="";
+  document.getElementById("swoja").value="";
+  document.getElementById("Guesser").value="";
+  document.getElementById("guesses").value="";
+}
